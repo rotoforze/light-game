@@ -1,13 +1,13 @@
 .tablero {
-    width: 100dvw;
+    width: 75dvw;
     height: fit-content;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-self: center;
 }
 .casilla {
     border: 1px solid black !important;
     border-radius: unset !important;
-    width: 31dvw;
-    height: 31dvw;
+    width: 25dvw;
+    height: 25dvw;
 }
