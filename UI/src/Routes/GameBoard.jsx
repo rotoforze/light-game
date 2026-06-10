@@ -29,15 +29,17 @@ function GameBoard() {
         // Derecha
         if (col + 1 < cols) nuevoTablero[casilla + 1] = !tablero[casilla + 1];
 
+        if (nuevoTablero.every(activo => activo)) setWin(true);
+
         setTablero(nuevoTablero);
     }
 
     return (
         <>
-            {win && <h3>Has ganado</h3>}
+            {win && <h3 className={'text-center'}>¡Has ganado!</h3>}
             <div className="tablero">
                 {tablero.map((activo, casilla) => {
-                    return <div key={casilla} className={"casilla btn "+ (activo ? 'btn-warning' : 'btn-dark')} onClick={() => {if (!win) handleClick(casilla)}}></div>
+                    return <div key={casilla} className={"casilla btn "+ (win ? 'btn-success' : activo ? 'btn-warning' : 'btn-dark')} onClick={() => {if (!win) handleClick(casilla)}}></div>
                 })}
             </div>
         </>
