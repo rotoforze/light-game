@@ -5,9 +5,9 @@ import '../../public/game.css'
 function GameBoard() {
 
     const [tablero, setTablero] = useState([
-        false, true, false,
         false, false, false,
-        true, false, false
+        false, false, false,
+        true, true, false
     ]);
 
     const [win, setWin] = useState(false);
