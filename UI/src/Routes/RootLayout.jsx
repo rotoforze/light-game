@@ -1,6 +1,14 @@
+import {Outlet} from "react-router-dom";
+import Navbar from "../Components/Navbar.jsx";
+
 function RootLayout({children}) {
     return (
-        {children}
+        <div>
+            <Navbar />
+            <main>
+                <Outlet/>
+            </main>
+        </div>
     )
 }
 

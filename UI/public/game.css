@@ -1,0 +1,11 @@
+.tablero {
+    width: 450px;
+    height: 450px;
+    margin: 0px auto;
+}
+.casilla {
+    border: 1px solid black !important;
+    border-radius: unset !important;
+    min-width: 150px;
+    min-height: 150px;
+}
